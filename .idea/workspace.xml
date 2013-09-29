@@ -20,33 +20,20 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="test1.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test1.html">
+      <file leaf-file-name="grid_editable.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grid_editable.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="9" selection-start="728" selection-end="728" vertical-scroll-proportion="0.6941896">
+            <state line="134" column="0" selection-start="4274" selection-end="4274" vertical-scroll-proportion="-9.81356">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ext-core-debug.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/ext-core-debug.js">
+      <file leaf-file-name="editableGrid.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/editableGrid.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4897" column="9" selection-start="132844" selection-end="132844" vertical-scroll-proportion="0.0">
-              <folding>
-                <marker date="1368687356000" expanded="false" signature="243282:243305" placeholder="..." />
-                <marker date="1368687356000" expanded="false" signature="243343:243366" placeholder="..." />
-                <marker date="1368687356000" expanded="false" signature="243432:243494" placeholder="..." />
-                <marker date="1368687356000" expanded="false" signature="243532:243595" placeholder="..." />
-                <marker date="1368687356000" expanded="false" signature="243661:243701" placeholder="..." />
-                <marker date="1368687356000" expanded="false" signature="243741:243782" placeholder="..." />
-                <marker date="1368687356000" expanded="false" signature="255349:255375" placeholder="..." />
-                <marker date="1368687356000" expanded="false" signature="255508:255519" placeholder="..." />
-                <marker date="1368687356000" expanded="false" signature="256044:256116" placeholder="..." />
-                <marker date="1368687356000" expanded="false" signature="256163:256204" placeholder="..." />
-                <marker date="1368687356000" expanded="false" signature="256257:256315" placeholder="..." />
-                <marker date="1368687356000" expanded="false" signature="257250:257301" placeholder="..." />
-              </folding>
+            <state line="69" column="21" selection-start="2177" selection-end="2177" vertical-scroll-proportion="0.7777778">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -61,7 +48,17 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
+        <option value="$PROJECT_DIR$/src/helloExt.js" />
+        <option value="$PROJECT_DIR$/lib/ext-all-debug.js" />
         <option value="$PROJECT_DIR$/test1.html" />
+        <option value="$PROJECT_DIR$/src/editableGrid.js" />
+        <option value="$PROJECT_DIR$/editableGrid.html" />
+        <option value="$PROJECT_DIR$/src/gridPlugin.js" />
+        <option value="$PROJECT_DIR$/grid_checkbox.html" />
+        <option value="$PROJECT_DIR$/src/checkboxGrid.js" />
+        <option value="$PROJECT_DIR$/grid_basic.html" />
+        <option value="$PROJECT_DIR$/src/basicGrid.js" />
+        <option value="$PROJECT_DIR$/grid_editable.html" />
       </list>
     </option>
   </component>
@@ -126,6 +123,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="extDemo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="extDemo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -144,7 +155,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
+              <option name="myItemId" value="img" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -156,9 +167,10 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="reference.settings.ide.settings.web.browsers" />
+    <property name="last_opened_file_path" value="D:/extJS/ext-4.2.1/examples" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -168,7 +180,7 @@
   <component name="RunManager">
     <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
       <JSDebuggerConfigurationSettings>
-        <option name="engineId" />
+        <option name="engineId" value="embedded" />
         <option name="fileUrl" />
       </JSDebuggerConfigurationSettings>
       <method />
@@ -203,7 +215,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="7" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -212,7 +224,7 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24984147" sideWeight="0.67086834" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32913166" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -280,21 +292,27 @@
           <properties />
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="61" />
+      <option name="time" value="349" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test1.html">
+    <entry file="file://$PROJECT_DIR$/grid_basic.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="6" selection-start="245" selection-end="245" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <marker date="1380448489766" expanded="true" signature="21:2079" placeholder="..." />
+            <marker date="1380448489766" expanded="true" signature="28:382" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test1.html">
+    <entry file="file://$PROJECT_DIR$/grid_basic.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="59" selection-start="109" selection-end="109" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <marker date="1380448489766" expanded="true" signature="21:2079" placeholder="..." />
+            <marker date="1380448489766" expanded="true" signature="28:382" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -308,13 +326,6 @@
     <entry file="file://$PROJECT_DIR$/lib/ext-all.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="31" selection-start="548" selection-end="548" vertical-scroll-proportion="0.5555556">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/ext-all-debug.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7767" column="36" selection-start="210323" selection-end="210323" vertical-scroll-proportion="0.5185185">
           <folding />
         </state>
       </provider>
@@ -339,9 +350,79 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test1.html">
+    <entry file="file://$PROJECT_DIR$/src/helloExt.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="9" selection-start="728" selection-end="728" vertical-scroll-proportion="0.6941896">
+        <state line="7" column="0" selection-start="159" selection-end="514" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/resources/ext-theme-neptune/ext-theme-neptune-all-debug.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11826" column="16" selection-start="341740" selection-end="341740" vertical-scroll-proportion="0.354531">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/resources/css/ext-all-neptune-debug.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grid_checkbox.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="103" selection-start="978" selection-end="978" vertical-scroll-proportion="-16.911764">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/basicGrid.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="92" column="51" selection-start="3121" selection-end="3121" vertical-scroll-proportion="0.0">
+          <folding>
+            <marker date="1380449018059" expanded="false" signature="1123:1129" placeholder="..." />
+            <marker date="1380449018059" expanded="false" signature="1257:1263" placeholder="..." />
+            <marker date="1380449018059" expanded="false" signature="1669:1675" placeholder="..." />
+            <marker date="1380449018059" expanded="false" signature="1803:1809" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/ext-all-debug.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="72867" column="4" selection-start="1927621" selection-end="1927621" vertical-scroll-proportion="0.33333334">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/checkboxGrid.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="80" column="31" selection-start="2825" selection-end="2825" vertical-scroll-proportion="2.7407408">
+          <folding>
+            <element signature="e#0#156#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grid_basic.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="4" selection-start="548" selection-end="844" vertical-scroll-proportion="-8.823529">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grid_editable.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="134" column="0" selection-start="4274" selection-end="4274" vertical-scroll-proportion="-9.81356">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/editableGrid.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="21" selection-start="2177" selection-end="2177" vertical-scroll-proportion="0.7777778">
           <folding />
         </state>
       </provider>

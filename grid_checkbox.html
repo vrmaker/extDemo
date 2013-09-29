@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link href="lib/resources/css/ext-all-neptune-debug.css" rel="stylesheet" />
+    <!--<script src="lib/ext-all.js"></script>-->
+    <script src="lib/ext-all-debug.js"></script>
+    <script src="src/checkboxGrid.js"></script>
+</head>
+<body>
+
+</body>
+<script>
+    Ext.onReady(function(){
+        var grid2 = Ext.create('Ext.grid.Panel', {
+            id: 'grid2',
+            store: getLocalStore(),
+            selType: 'checkboxmodel',
+            columns: [
+                {text: "Company", width: 200, dataIndex: 'company',tooltip:'sort company'},
+                {text: "Price", renderer: Ext.util.Format.usMoney, dataIndex: 'price',tooltip:'sort price'},
+                {text: "Change", dataIndex: 'change',tooltip:'sort change'},
+                {text: "% Change", dataIndex: 'pctChange',tooltip:'sort pctChange'},
+                {text: "Last Updated", width: 135, renderer: Ext.util.Format.dateRenderer('m/d/Y'), dataIndex: 'lastChange'}
+            ],
+            columnLines: true,
+            width: 600,
+            height: 300,
+            frame: true,
+            title: 'Framed with Checkbox Selection and Horizontal Scrolling',
+            iconCls: 'icon-grid',
+            margin: '0 0 20 0',
+            renderTo: Ext.getBody()
+        });
+    })
+</script>
+</html>
