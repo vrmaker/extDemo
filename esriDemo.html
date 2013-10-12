@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link href="lib/esri.css" rel="stylesheet">
+    <script src="lib/esri-init.js"></script>
+    <script src="lib/ext-all.js"></script>
+</head>
+<body>
+<div id="mapDiv"></div>
+</body>
+<script>
+
+    Ext.onReady(function(){
+        init();
+    })
+var init = function(){
+    //dojo.require("esri.*");
+    //dojo.require("esri.map");
+
+    var mymap = new esri.Map("mapDiv");
+
+    var myTiledMapServiceLayer = new esri.layers.ArcGISTiledMapServiceLayer("http://192.168.16.58/ArcGIS/rest/services/bhmap/MapServer");
+    //var myTiledMapServiceLayer = new esri.layers.ArcGISDynamicMapServiceLayer("http://localhost/ArcGIS/rest/services/world/MapServer");
+    mymap.addLayer(myTiledMapServiceLayer);
+}
+</script>
+</html>
