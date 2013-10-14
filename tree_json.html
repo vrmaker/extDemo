@@ -2,19 +2,63 @@
 <html>
 <head>
     <title></title>
-    <link href="lib/resources/css/ext-all-neptune-debug.css"/>
+    <link href="lib/resources/css/ext-all-neptune.css" rel="stylesheet"/>
     <script src="lib/ext-all-debug.js"></script>
-    <script src="src/basicTree.js"></script>
-
-    <style type="text/css">
-
-        #tree, #tree2 {
-            float: left;
-            margin: 20px;
-        }
-    </style>
 </head>
 <body>
 
 </body>
+<script>
+    Ext.onReady(function(){
+        Ext.create("Ext.data.TreeStore",{
+            id:'treeStore',
+            proxy: {
+                type: 'ajax',
+                url : 'src/data/TreeData.js'
+            },
+            root:{
+                text:'root',
+                expanded:true
+            }
+        });
+
+        var tree = Ext.create("Ext.tree.Panel",{
+            width:200,
+            height:300,
+            renderTo:Ext.getBody(),
+            store:"treeStore",
+            rootVisible:false,
+            viewConfig:{
+                listeners:{
+                    refresh:function(){
+                        this.select(0);
+                    },
+                    checkchange:function(node,checked){
+                        if(node.childNodes.length>0)
+                            this.changeChecked(node.childNodes,checked)
+
+                        var record = this.getChecked();
+                        console.log("checked",record);
+                    }
+                },
+                changeChecked:function(node,checked){
+                    if(Ext.isArray(node)){
+                        for(var i=node.length-1;i>=0;i--){
+                            this.changeChecked(node[i],checked);
+                        }
+                    }else{
+                        if(node.data.checked!=null){
+                            node.set("checked",checked);
+                            console.log(node);
+                        }
+                        if(node.childNodes.length>0)
+                            this.changeChecked(node.childNodes,checked);
+                    }
+                }
+            }
+        })
+
+        console.log(tree);
+    })
+</script>
 </html>
