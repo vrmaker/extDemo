@@ -1,0 +1,20 @@
+﻿[
+	{id:"1",text:"节点1",checked:false,expanded:true,"children":[
+		{id:"4",text:"节点1-1",checked:false,children:[
+			{id:"13",text:"节点1-1-1",checked:false,leaf:true},
+			{id:"14",text:"节点1-1-2",checked:false,leaf:true},
+			{id:"15",text:"节点1-1-3",checked:false,leaf:true}
+		]},
+		{id:"5",text:"节点1-2",checked:false,children:[
+			{id:"7",text:"节点2-1",checked:false,name:"qq",leaf:true},
+			{id:"8",text:"节点2-2",checked:false,leaf:true},
+			{id:"9",text:"节点2-3",checked:false,leaf:true}
+		]},
+		{id:"6",text:"节点1-3",checked:false,children:[
+			{id:"10",text:"节点3-1",checked:false,leaf:true},
+			{id:"11",text:"节点3-2",checked:false,leaf:true},
+			{id:"12",text:"节点3-3",checked:false,leaf:true}
+		]}
+	]},
+	{id:"16",text:"节点2",checked:true}
+]
