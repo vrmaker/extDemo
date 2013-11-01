@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="lib/resources/css/ext-all-neptune-debug.css" rel="stylesheet" />
+    <!--<script src="lib/ext-all.js"></script>-->
+    <script src="lib/ext-all-debug.js"></script>
+    <script src="src/checkboxGrid.js"></script>
+    <script src="src/data/comboData.js"></script>
+</head>
+<body>
+
+</body>
+<script>
+    Ext.onReady(function(){
+        var gValue =null;
+        var form = Ext.create('Ext.form.Panel',{
+            tittle:'checkbox-combo',
+            width:      240,
+            height:     500,
+            renderTo:Ext.getBody(),
+            items:[
+                {
+                    anchor:    '90%',
+                    margin:     '15,10,15,10',
+                    xtype:          'combo',
+                    queryMode:      'local',
+                    value:          'zzsj',
+                    triggerAction:  'all',
+                    forceSelection: true,
+                    editable:       false,
+                    hideLabel:      true,
+                    name:           'title',
+                    displayField:   'name',
+                    valueField:     'value',
+                    store:          Ext.create('Ext.data.Store', {
+                        fields : ['name', 'value'],
+                        data   : ComboData
+                    }),
+                    listeners:{
+                        change:function(newValue){
+                            for(var v in CheckData){
+                                if(newValue.getValue() == v){
+                                    Ext.getCmp('multiField-cbgroup').removeAll();
+                                    gValue = CheckData[v];
+                                    Ext.getCmp('multiField-cbgroup').add(gValue);
+                                    console.log(Ext.getCmp('multiField-cbgroup'));
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    xtype:'checkboxgroup',
+                    id:'multiField-cbgroup',
+                    layout:'vbox',
+                    autoScroll:true,
+                    margin:'10',
+                    items:  CheckData.zzsj
+                }
+            ]
+        })
+    })
+</script>
+</html>

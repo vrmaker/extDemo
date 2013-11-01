@@ -1,20 +1,22 @@
 ﻿[
-	{id:"1",text:"节点1",checked:false,expanded:true,"children":[
-		{id:"4",text:"节点1-1",checked:false,children:[
-			{id:"13",text:"节点1-1-1",checked:false,leaf:true},
-			{id:"14",text:"节点1-1-2",checked:false,leaf:true},
-			{id:"15",text:"节点1-1-3",checked:false,leaf:true}
+	{text:"基础地理数据",checked:false,expanded:true,"children":[
+		{text:"基本地形图",checked:false,children:[
+			{text:"影像图",checked:false,leaf:true},
+			{text:"电子地图",checked:false,leaf:true}
 		]},
-		{id:"5",text:"节点1-2",checked:false,children:[
-			{id:"7",text:"节点2-1",checked:false,name:"qq",leaf:true},
-			{id:"8",text:"节点2-2",checked:false,leaf:true},
-			{id:"9",text:"节点2-3",checked:false,leaf:true}
-		]},
-		{id:"6",text:"节点1-3",checked:false,children:[
-			{id:"10",text:"节点3-1",checked:false,leaf:true},
-			{id:"11",text:"节点3-2",checked:false,leaf:true},
-			{id:"12",text:"节点3-3",checked:false,leaf:true}
+		{text:"业务数据",checked:false,children:[
+			{text:"控制性详细规划图",checked:false,name:"qq2-1",leaf:true},
+			{text:"地名",checked:false,name:"qq2-2",leaf:true},
+            {text:"规划条件",checked:false,name:"qq2-1",leaf:true},
+            {text:"选址意见书",checked:false,name:"qq2-2",leaf:true},
 		]}
 	]},
-	{id:"16",text:"节点2",checked:true}
+	{text:"资源处专题数据",checked:false,children:[
+        {text:"土地征转用地",checked:false,leaf:true},
+        {text:"土地开发整理",checked:false,leaf:true},
+        {text:"土地占补平衡",checked:false,leaf:true},
+        {text:"地热地矿",checked:false,leaf:true},
+        {text:"高标准基本农田",checked:false,leaf:true}
+    ]}
 ]
+

@@ -4,7 +4,9 @@
     <title></title>
     <link href="lib/resources/css/ext-all-neptune-debug.css" rel="stylesheet" />
     <!--<script src="lib/ext-all.js"></script>-->
+
     <script src="lib/ext-all-debug.js"></script>
+    <script src="lib/locale/ext-lang-zh_CN.js"></script>
     <script src="src/editableGrid.js"></script>
 
     <style>
@@ -32,7 +34,7 @@
 // create the grid and specify what field you want
 // to use for the editor at each column.
         var grid = Ext.create('Ext.grid.Panel', {
-            store: store,
+            //store: store,
             columns: [
                 {
                     xtype: 'checkcolumn',
@@ -85,10 +87,11 @@
                     minValue: 1,
                     maxValue: 150000
                 }
+
             }],
             renderTo: 'editor-grid',
             width: 600,
-            height: 400,
+            height: 600,
             title: 'Employee Salaries',
             frame: true,
             tbar: [{

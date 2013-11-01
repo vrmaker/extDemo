@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
     <title></title>
     <link href="lib/resources/css/ext-all-neptune.css" rel="stylesheet"/>
     <script src="lib/ext-all-debug.js"></script>
@@ -17,7 +18,7 @@
                 url : 'src/data/TreeData.js'
             },
             root:{
-                text:'root',
+                text:'数据资源',
                 expanded:true
             }
         });
@@ -27,32 +28,58 @@
             height:300,
             renderTo:Ext.getBody(),
             store:"treeStore",
-            rootVisible:false,
+            rootVisible:true,
             viewConfig:{
                 listeners:{
                     refresh:function(){
-                        this.select(0);
+                        //this.select(0);
                     },
                     checkchange:function(node,checked){
-                        if(node.childNodes.length>0)
-                            this.changeChecked(node.childNodes,checked)
+                        if(node.isLeaf()){
+                            console.log("---qq1---",node.raw.name);  //叶子结点
+                        }
 
-                        var record = this.getChecked();
-                        console.log("checked",record);
+                        if(node.childNodes.length>0)
+                            this.setChildNode(node.childNodes,checked)
+
+                        if(node.parentNode !=null){
+                            this.setParentNode(node.parentNode,checked);
+                        }
+
+
+                        //console.log("parent",node.parentNode);
+
                     }
                 },
                 changeChecked:function(node,checked){
+                    //this.setParentNode(node,checked);
+                },
+                setParentNode:function(node,checked){
+                    node.set("checked",checked);
+                    if(node.parentNode !=null){
+                        this.setParentNode(node.parentNode,checked);
+
+                    }
+                },
+                setChildNode:function(node,checked){
                     if(Ext.isArray(node)){
                         for(var i=node.length-1;i>=0;i--){
-                            this.changeChecked(node[i],checked);
+                            this.setChildNode(node[i],checked);
                         }
                     }else{
                         if(node.data.checked!=null){
-                            node.set("checked",checked);
-                            console.log(node);
+                            if(checked == node.data.checked){
+                                //如果叶结点的已经checked=false,则父结点忽略修改该结点
+                            }
+                            else{
+                                node.set("checked",checked);
+                                //console.log("node",node);
+                                console.log("---qq2---",node.raw.name);
+                            }
+
                         }
                         if(node.childNodes.length>0)
-                            this.changeChecked(node.childNodes,checked);
+                            this.setChildNode(node.childNodes,checked);
                     }
                 }
             }

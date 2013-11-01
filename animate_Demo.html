@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="lib/resources/css/ext-all-neptune-debug.css" rel="stylesheet" />
+    <!--<script src="lib/ext-all.js"></script>-->
+    <script src="lib/ext-all-debug.js"></script>
+</head>
+<body>
+
+</body>
+<script>
+    Ext.onReady(function(){
+        if(Ext.BLANK_IMAGE_URL.substr(0,4)!="data"){
+            Ext.BLANK_IMAGE_URL="./images/s.gif";
+        }
+        //在此添加ExtJS代码
+
+        var doAnim=function(el){
+            //var img=panel.down("toolbar"),
+            var img = Ext.getCmp("btn");
+                    cb=Ext.getCmp("pos"),
+                    pos=cb.getValue()?cb.getValue():"t";
+            img.el["slideIn"]("t");
+            //img.el[el.text](pos)
+        }
+
+        var store=Ext.create(Ext.data.ArrayStore,{
+            fields:["text","value"],
+            data:[["左上角","tl"],
+                ["顶边中心","t"],
+                ["右上角","tr"],
+                ["左边中心","l"],
+                ["右边中心","r"],
+                ["左下角","bl"],
+                ["底边中心","b"],
+                ["左上角","br"]
+            ]
+        })
+
+        var panel=Ext.create(Ext.Panel,{
+            renderTo:Ext.getBody(),
+            width:800,height:500,
+            items:[
+                {
+
+                    tbar:[
+                        {xtype:"button",id:"btn",text:"test"}
+                    ]
+                }
+//                {xtype:"image",width:500,src:"lib/img/1.jpg"},
+//                {xtype:"panel",height:60,
+//                    bodyStyle:"font-size:40px;line-height:60px;text-align:center",
+//                    html:"<span id='test'>测试文字</span>"
+//                }
+            ],
+            tbar:[
+                {text:"slideIn",handler:doAnim},
+                {text:"slideOut",handler:doAnim},
+                {text:"puff",handler:function(){
+                    var img=panel.down("image");
+                    img.el.puff();
+                }},
+                {text:"switchOff",handler:function(){
+                    var img=panel.down("image");
+                    img.el.switchOff();
+                }},
+                {text:"fadeIn",handler:function(){
+                    var img=panel.down("image");
+                    img.el.fadeIn({duration:3000});
+                }},
+                {text:"fadeOut",handler:function(){
+                    var img=panel.down("image");
+                    img.el.fadeOut({duration:3000});
+                }},
+                {text:"ghost",handler:doAnim},
+                {text:"frame",handler:function(){
+                    var el=Ext.get("test");
+                    el.frame("#0000ff",3);
+                }},
+                {text:"highlight",handler:function(){
+                    var el=Ext.get("test");
+                    el.highlight("#0000ff");
+                }},
+                "位置：",
+                {xtype:"combo",id:"pos",store:store,
+                    displayField:"text",valueField:"value",
+                    value:"tl"
+                }
+            ]
+
+        });
+
+    });
+</script>
+</html>

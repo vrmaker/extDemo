@@ -16,8 +16,9 @@
             id: 'grid2',
             store: getLocalStore(),
             selType: 'checkboxmodel',
+            plugins: [rowEditing],
             columns: [
-                {text: "Company", width: 200, dataIndex: 'company',tooltip:'sort company'},
+                {text: "Company", width: 200, dataIndex: 'company',tooltip:'sort company',editor: {allowBlank: false}},
                 {text: "Price", renderer: Ext.util.Format.usMoney, dataIndex: 'price',tooltip:'sort price'},
                 {text: "Change", dataIndex: 'change',tooltip:'sort change'},
                 {text: "% Change", dataIndex: 'pctChange',tooltip:'sort pctChange'},
@@ -30,7 +31,13 @@
             title: 'Framed with Checkbox Selection and Horizontal Scrolling',
             iconCls: 'icon-grid',
             margin: '0 0 20 0',
-            renderTo: Ext.getBody()
+            renderTo: Ext.getBody(),
+            listeners:{
+                edit:function(){
+                    alert("");
+                }
+            }
+
         });
     })
 </script>

@@ -21,6 +21,7 @@ Ext.define('KitchenSink.view.grid.ArrayGrid', {
     initComponent: function () {
         this.width = 650;
         this.columns = [
+            {xtype: 'rownumberer'},
             {
                 text     : 'Company',
                 flex     : 1,

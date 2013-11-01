@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link href="lib/resources/css/ext-all-neptune-debug.css" rel="stylesheet" />
+    <script src="lib/ext-all-debug.js"></script>
+</head>
+<body>
+
+</body>
+<script>
+    var grid = Ext.create('Ext.grid.property.Grid', {
+        title: 'Properties Grid',
+        width: 300,
+        renderTo: Ext.getBody()
+    });
+
+
+
+    var object = {"OBJECTID":"34","序号":"0","所属区域":"Null","项目名称":"大唐总部基地东区","申报单位":"Null","项目地址":"塘沽区青海湖路以西，晋州道以北","SZFW":"东至：青海湖路；西至：洞庭二支路；南至：晋州道；北至：泸州道","DMHY":"取名来自于中国最强盛的唐朝，成为大唐，寓意中国繁荣昌盛。项目位于企业总部基地规划区域，分为东、西2个项目，现称为东区项目。所以起名大唐总部基地东区。","总用地面积_平方米":"34425.8","JZMJ":"51638.6","LDL":"10.5%","LZS":"9","GXSJ":"2012年03月前","KGSJ":"2011年02月14日","JGSJ":"2012年05月30日","备注":"Null","Shape":"Point"};
+    grid.setSource(object);
+</script>
+</html>

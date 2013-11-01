@@ -15,6 +15,10 @@ Ext.require([
     'Ext.selection.CheckboxModel'
 ]);
 
+var rowEditing = Ext.create('Ext.grid.plugin.RowEditing', {
+    clicksToMoveEditor: 1,
+    autoCancel: false
+});
 
     Ext.define('Company', {
         extend: 'Ext.data.Model',

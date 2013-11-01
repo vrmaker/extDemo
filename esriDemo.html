@@ -7,7 +7,7 @@
     <script src="lib/ext-all.js"></script>
 </head>
 <body>
-<div id="mapDiv"></div>
+<div id="mapDiv" style="height: 800px;width: 1200px;"></div>
 </body>
 <script>
 
@@ -21,8 +21,12 @@ var init = function(){
     var mymap = new esri.Map("mapDiv");
 
     var myTiledMapServiceLayer = new esri.layers.ArcGISTiledMapServiceLayer("http://192.168.16.58/ArcGIS/rest/services/bhmap/MapServer");
-    //var myTiledMapServiceLayer = new esri.layers.ArcGISDynamicMapServiceLayer("http://localhost/ArcGIS/rest/services/world/MapServer");
     mymap.addLayer(myTiledMapServiceLayer);
+
+    //var mapLayer = new esri.layers.ArcGISTiledMapServiceLayer("http://192.168.16.58/ArcGIS/rest/services/binhairoad2012/MapServer");
+
+    var mapLayer = new esri.layers.ArcGISDynamicMapServiceLayer("http://192.168.16.58/ArcGIS/rest/services/binhairoad2012/MapServer");
+    mymap.addLayer(mapLayer);
 }
 </script>
 </html>

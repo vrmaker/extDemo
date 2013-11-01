@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="lib/resources/css/ext-all-neptune-debug.css" rel="stylesheet" />
+    <!--<script src="lib/ext-all.js"></script>-->
+    <script src="lib/ext-all-debug.js"></script>
+
+</head>
+<body>
+
+</body>
+<script>
+
+    Ext.onReady(function(){
+        gAnnoMsgWnd = Ext.create('Ext.window.Window',{
+            title:'添加标注信息',
+            width:300,
+            height:200,
+            hidden:true,
+            constrain:false,
+            modal:true,
+            defaults:{labelWidth:30},
+            layout:{type:'vbox',align:'middle',defaultMargins:{left:10}},
+            items:[
+
+                {
+                    width:'100%',
+                    border:false,
+                    layout:{type:'hbox',pack:'end',defaultMargins:{right:10}},
+                    margin:'10 0 0 0',
+                    items:[
+                        {
+                            xtype:'button',
+                            text:'保存',
+                            pack:'end',
+                            handler:function(){
+                                createWindow();
+                            }
+                        }
+                    ]
+
+                }
+            ],
+            listeners:{
+                close:function(){
+
+                }  //监听关闭事件
+            }
+        }).show()
+    }
+    )
+    var createWindow = function(){
+        Ext.create('Ext.window.Window',{
+            tittle:'window',
+            width:90,
+            height:90
+        }).show()
+    }
+</script>
+</html>

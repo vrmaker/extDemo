@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link href="lib/resources/css/ext-all-neptune-debug.css" rel="stylesheet"/>
+
+    <script src="lib/ext-all-debug.js"></script>
+</head>
+<body>
+
+</body>
+<script>
+    Ext.onReady(function(){
+        var itemsPerPage = 2;   // set the number of items you want per page
+
+        Ext.define('model',{
+            extend:'Ext.data.Model',
+            fields:[
+                {name:'name',type:'string'},
+                {name:'email',type:'string'},
+                {name:'phone',type:'double'}
+            ]
+        })
+
+        var store = Ext.create('Ext.data.Store', {
+            id:'simpsonsStore',
+            autoLoad: true,
+            //fields:['name', 'email', 'phone'],
+            model:'model',
+            pageSize: 2, // items per page
+            proxy: {
+                type: 'ajax',
+                url: 'src/data/pagingstore.js',  // url that will load data with respect to start and limit params
+                reader: {
+                    type: 'json',
+                    root: 'items',
+                    totalProperty: 'totalCount'
+                }
+            }
+        });
+
+// specify segment of data you want to load using params
+        store.load({
+            params:{
+                start:0,
+                limit: itemsPerPage
+            },
+            callback:function(records, operation, success){
+                console.log("e",records);
+            }
+        });
+
+        Ext.create('Ext.grid.Panel', {
+            title: 'Simpsons',
+            store: store,
+            columns: [
+                { header: 'Name',  dataIndex: 'name' },
+                { header: 'Email', dataIndex: 'email', flex: 1 },
+                { header: 'Phone', dataIndex: 'phone' }
+            ],
+            width: 460,
+            height: 325,
+            dockedItems: [{
+                xtype: 'pagingtoolbar',
+                store: store,   // same store GridPanel is using
+                dock: 'bottom',
+                displayInfo: true
+            }],
+            renderTo: Ext.getBody()
+        });
+
+        console.log(store);
+    })
+
+</script>
+</html>
