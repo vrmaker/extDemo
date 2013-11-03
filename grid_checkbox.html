@@ -5,6 +5,8 @@
     <link href="lib/resources/css/ext-all-neptune-debug.css" rel="stylesheet" />
     <!--<script src="lib/ext-all.js"></script>-->
     <script src="lib/ext-all-debug.js"></script>
+    <script src="lib/exportXLS.js"></script>
+    <script src="src/export.js"></script>
     <script src="src/checkboxGrid.js"></script>
 </head>
 <body>
@@ -17,12 +19,21 @@
             store: getLocalStore(),
             selType: 'checkboxmodel',
             plugins: [rowEditing],
+            tbar:[
+                {
+
+                    text:'export',
+                    handler:function(){
+                        exportExcel(grid2);
+                    }
+                }
+            ],
             columns: [
                 {text: "Company", width: 200, dataIndex: 'company',tooltip:'sort company',editor: {allowBlank: false}},
                 {text: "Price", renderer: Ext.util.Format.usMoney, dataIndex: 'price',tooltip:'sort price'},
                 {text: "Change", dataIndex: 'change',tooltip:'sort change'},
-                {text: "% Change", dataIndex: 'pctChange',tooltip:'sort pctChange'},
-                {text: "Last Updated", width: 135, renderer: Ext.util.Format.dateRenderer('m/d/Y'), dataIndex: 'lastChange'}
+                {text: "% Change", dataIndex: 'pctChange',tooltip:'sort pctChange'}
+                //{text: "Last Updated", width: 135, renderer: Ext.util.Format.dateRenderer('m/d/Y'), dataIndex: 'lastChange'}
             ],
             columnLines: true,
             width: 600,
