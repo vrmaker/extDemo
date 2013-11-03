@@ -72,8 +72,8 @@ var rowEditing = Ext.create('Ext.grid.plugin.RowEditing', {
             {text: "Company", width: 200, dataIndex: 'company'},
             {text: "Price", renderer: Ext.util.Format.usMoney, dataIndex: 'price'},
             {text: "Change", dataIndex: 'change'},
-            {text: "% Change", dataIndex: 'pctChange'},
-            {text: "Last Updated", width: 135, renderer: Ext.util.Format.dateRenderer('m/d/Y'), dataIndex: 'lastChange'}
+            {text: "% Change", dataIndex: 'pctChange'}
+            //{text: "Last Updated", width: 135, renderer: Ext.util.Format.dateRenderer('m/d/Y'), dataIndex: 'lastChange'}
         ],
         columnLines: true,
         width: 600,
